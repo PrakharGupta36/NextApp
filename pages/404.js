@@ -4,17 +4,16 @@ import { useRouter } from "next/router";
 
 const NotFound = () => {
   const [loader, setLoader] = useState(0);
-
   const router = useRouter();
 
   useEffect(() => {
     setInterval(() => {
-      setLoader((loader = loader + 1));
+      setLoader((loader += 1));
     }, 60);
     setTimeout(() => {
       router.push("/");
     }, 6000);
-  });
+  },[]);
 
   return (
     <div className='non-found'>

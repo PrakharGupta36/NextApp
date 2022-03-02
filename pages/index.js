@@ -1,3 +1,16 @@
+import Head from "next/head"
 export default function Home() {
-  return <main> <p>  </p> </main>;
+
+  return (
+    <>
+      <Head>
+        <title> NextApp </title>
+        <meta />
+      </Head>
+      <main>
+        {" "}
+        <p> </p>{" "}
+      </main>
+    </>
+  );
 }

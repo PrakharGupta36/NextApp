@@ -1,18 +1,12 @@
 import Link from "next/link";
-import { useEffect, useState } from "react";
-import { useRouter } from "next/router";
+import { useEffect } from "react";
+import Router from "next/router";
 
 const NotFound = () => {
-  const [loader, setLoader] = useState(0);
-  const router = useRouter();
-
   useEffect(() => {
-    setInterval(() => {
-      setLoader((loader += 1));
-    }, 60);
     setTimeout(() => {
-      router.push("/");
-    }, 6000);
+      Router.push("/");
+    }, 3000);
   }, []);
 
   return (
@@ -23,7 +17,7 @@ const NotFound = () => {
       </p>
       <p className='not-found-main'>
         Your PC ran into problem and need to restart. We just collecting some
-        some error info, and then we'll restart for you. ({loader}% complete){" "}
+        some error info, and then we'll restart for you. You'll be redirected in 5 seconds...
       </p>
       <p>
         {" "}

@@ -1,5 +1,5 @@
 import Head from "next/head";
-import Link from "next/link";
+import Router from "next/router";
 export default function Home() {
   return (
     <>
@@ -16,8 +16,11 @@ export default function Home() {
             nobis sed vitae, illo tenetur ea! Deserunt, labore! Optio
             voluptatibus quisquam repellat saepe.
           </p>
-          <button className='home-page-link'>
-            <Link href={"/list"}> List </Link>
+          <button
+            onClick={() => {
+              Router.push("/list");
+            }}>
+            Link
           </button>
         </section>
       </main>

@@ -4,7 +4,6 @@ const NavLogo = () => {
   return (
     <div className='nav-logo'>
       <li>
-        {" "}
         <Link href='/'>
           <SiNextdotjs className='logo' />
         </Link>

@@ -5,7 +5,9 @@ const NavLogo = () => {
     <div className='nav-logo'>
       <li>
         <Link href='/'>
-          <SiNextdotjs className='logo' />
+          <a>
+            <SiNextdotjs className="logo" width={64} />
+          </a>
         </Link>
       </li>
     </div>

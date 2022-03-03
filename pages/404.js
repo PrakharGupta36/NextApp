@@ -13,7 +13,7 @@ const NotFound = () => {
     setTimeout(() => {
       router.push("/");
     }, 6000);
-  },[]);
+  }, []);
 
   return (
     <div className='non-found'>

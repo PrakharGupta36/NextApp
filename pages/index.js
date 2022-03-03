@@ -1,6 +1,6 @@
-import Head from "next/head"
+import Head from "next/head";
+import Link from "next/link";
 export default function Home() {
-
   return (
     <>
       <Head>
@@ -8,8 +8,18 @@ export default function Home() {
         <meta />
       </Head>
       <main>
-        {" "}
-        <p> </p>{" "}
+        <section className='home-page'>
+          <h1> Hello, people </h1>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia
+            maiores reprehenderit dicta aperiam quo cumque voluptatem debitis
+            nobis sed vitae, illo tenetur ea! Deserunt, labore! Optio
+            voluptatibus quisquam repellat saepe.
+          </p>
+          <button className='home-page-link'>
+            <Link href={"/list"}> List </Link>
+          </button>
+        </section>
       </main>
     </>
   );

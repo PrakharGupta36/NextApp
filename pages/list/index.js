@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 export async function getServerSideProps() {
   const res = await fetch(`https://jsonplaceholder.typicode.com/users`);
@@ -8,18 +9,17 @@ export async function getServerSideProps() {
 }
 
 const List = ({ list }) => {
-  let API = "https://robohash.org/";
-
   return (
     <div className='list'>
       {list.map((i, index) => {
-        const { name, email } = i;
+        const { name, email, id } = i;
         return (
-          <div className='card' key={index}>
-            {/* <Image src={`${API}/${index}.png`} width={500} height={500} /> */}
-            <h4> {name} </h4>
-            <p> {email} </p>
-          </div>
+          <Link key={index} href={`/list/${id}`}>
+            <div className='card' key={index}>
+              <h4> {name} </h4>
+              <p> {email} </p>
+            </div>
+          </Link>
         );
       })}
     </div>

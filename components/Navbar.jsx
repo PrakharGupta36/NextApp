@@ -7,6 +7,7 @@ import NavMobile from "./Navbar/NavMobile";
 export default function Navbar() {
   const [colorChange, setColorchange] = useState(false);
 
+
   useEffect(() => {
     window.addEventListener("scroll", () => {
       if (window.scrollY >= 0.75) {
